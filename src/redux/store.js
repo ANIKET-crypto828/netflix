@@ -1,10 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit';
-import userReducer from './userSlice'; // Import your user slice reducer
+import userReducer from './userSlice';
+import movieReducer from './movieSlice'; // Import your user slice reducer
+import searchSlice from './searchSlice'; // Import your movie slice reducer
 
 const store = configureStore({
   reducer: {
     // Add your reducers here
-    user: userReducer, // Add your user reducer here
+    user: userReducer, 
+    movie: movieReducer, 
+    searchMovie: searchSlice, // Add your movie slice reducer
   },
 });
 
